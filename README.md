@@ -2,6 +2,21 @@
 Code base which has EDA and processing of EHR data
 This notebook processes structured data from the NACC (National Alzheimer's Coordinating Center) dataset. It includes data loading, cleaning, transformation, and preparation steps intended for downstream machine learning or knowledge graph creation tasks.
 
+# MIMIC_NACC_final_v3.ipynb
+
+The goal is to align structured data fields commonly used in dementia/Alzheimer’s research with relevant free-text sections typically found in discharge summaries, progress notes, or other clinical narratives in MIMIC. This mapping supports downstream tasks such as Data harmonization across structured and unstructured sources.
+
+## Functions and Key Code Components
+
+| Function / Component | Purpose |
+|-----------------------|---------|
+| **Data Loading** | Reads in NACC structured variable definitions and any available metadata needed for mapping. |
+| **Mapping Logic** | Uses semantic rules or keyword matching to associate NACC variables with clinically relevant sections in MIMIC (e.g., "History of Present Illness", "Past Medical History"). |
+| **Mapping Table Construction** | Constructs a dictionary or dataframe where each NACC variable is assigned to a MIMIC note section. |
+| **Validation / Preview** | Displays samples of the mapping to review the appropriateness and completeness of the alignments. |
+| **Export Function** | Saves the final NACC-to-MIMIC mapping as a JSON or CSV for use in downstream data pipelines (such as RAG-based synthetic note generation). |
+
+
 # NACC_data.ipynb
 
 ## Key Features
