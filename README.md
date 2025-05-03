@@ -52,3 +52,26 @@ This notebook focuses on transforming cleaned NACC structured data into a Neo4j-
 ## Output
 - A populated Neo4j graph database with patient and clinical visit data
 - Embedded metadata for better interpretation of nodes and relationships
+
+# GraphRAG_setup.ipynb
+
+This notebook, is a **Proof of Concept (POC)** for setting up a Graph-based Retrieval-Augmented Generation (RAG) architecture. The goal of this POC is to demonstrate the feasibility of integrating a Knowledge Graph with RAG workflows for enhanced automated structured data retrieval.
+
+## Purpose
+
+- To initialize and configure the components necessary for GraphRAG.
+- To explore basic integrations between graph databases and LLM-based retrieval mechanisms.
+- To provide a sandbox environment for testing GraphRAG queries and document retrieval workflows.
+
+## `GraphRAG_setup.ipynb` includes:
+- Graph database initialization.
+- Sample schema creation for nodes and relationships to mimic the actual graph.
+- Querying and retrieval experiments to test the integration.
+- Llama and deepseek connection setup.
+
+## Requirements
+- Python 3.9+
+- Neo4j or AuraDB
+- LangChain 
+- Ollama for deepseek, Hugging Face for Llama
+- Additional libraries as imported in the notebook (e.g., pandas, py2neo, etc.)
